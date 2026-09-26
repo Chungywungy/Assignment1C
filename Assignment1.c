@@ -40,9 +40,8 @@ int integerProduct(int number, int times)
     /* TODO: */
     int sum = 0;
     for (int i = 0; i < times; i++) {
-        sum = number + number;
+        sum += number;
     }
-
     return sum;
 }
 
