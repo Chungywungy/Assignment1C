@@ -67,6 +67,22 @@ int isPerfectNumber(int number)
 void displayRectangle(int height, int width)
 {
     /* TODO: */
+    for (int i = 0; i < height; i++) {
+        if (i != 0) {
+            printf("\n");
+        }
+        for (int j = 0; j < width; j++) {
+            char star = '*';
+            if (j == 0 || j == width - 1) {
+                star = '*';
+            } else if (i == 0 || i == height - 1) {
+                star = '*';
+            } else {
+                star = ' ';
+            }
+            printf("%c", star);
+        }
+    }
 }
 
 
