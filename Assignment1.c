@@ -50,7 +50,15 @@ int integerProduct(int number, int times)
 int isPerfectNumber(int number)
 {
     /* TODO: */
-
+    int sum = 0;
+    for (int i = 1; i < number; i++) {
+        if (number % i == 0) {
+            sum += i;
+        }
+    }
+    if (sum == number) {
+        return 1;
+    }
     return 0;
 }
 
