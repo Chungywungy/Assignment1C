@@ -90,8 +90,13 @@ void displayRectangle(int height, int width)
 int oddSum(int n)
 {
     /* TODO: */
-
-    return 0;
+    if (n <= 0) {
+        return 0;
+    }
+    if (n % 2 == 1) {
+        return n + oddSum(n - 1);
+    }
+    return oddSum(n - 1);
 }
 
 #ifdef TEST_ASSIGNMENT
