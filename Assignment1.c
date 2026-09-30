@@ -17,16 +17,19 @@ char triangle(int angle1, int angle2, int angle3)
 {
     /* TODO: */
     const int sum = angle1 + angle2 + angle3;
-
+    // check if angles constitute a valid triangle
     if (sum != 180) {
         return 'I';
     }
+    // check if triangle is acute
     if (angle1 < 90 && angle2 < 90 && angle3 < 90) {
         return 'A';
     }
+    // check if triangle is obtuse
     if (angle1 > 90 || angle2 > 90 || angle3 > 90) {
         return 'O';
     }
+    // check if triangle is right angle
     if (angle1 == 90 || angle2 == 90 || angle3 == 90) {
         return 'R';
     }
@@ -39,6 +42,7 @@ int integerProduct(int number, int times)
 {
     /* TODO: */
     int sum = 0;
+    //adds number to sum, times amount of times
     for (int i = 0; i < times; i++) {
         sum += number;
     }
@@ -51,11 +55,13 @@ int isPerfectNumber(int number)
 {
     /* TODO: */
     int sum = 0;
+    // checks if i is a divisor of number and adds it to sum if it's a divisor of number
     for (int i = 1; i < number; i++) {
         if (number % i == 0) {
             sum += i;
         }
     }
+    // checks if number is a perfect number
     if (sum == number) {
         return 1;
     }
@@ -68,15 +74,18 @@ void displayRectangle(int height, int width)
 {
     /* TODO: */
     for (int i = 0; i < height; i++) {
+        // makes sure stars aren't in a straight line
         if (i != 0) {
             printf("\n");
         }
         for (int j = 0; j < width; j++) {
             char star = '*';
+            // changes char to * if it's the border and not the first or last row
             if (j == 0 || j == width - 1) {
                 star = '*';
             } else if (i == 0 || i == height - 1) {
                 star = '*';
+            // changes char to ' ' if i, j do not correspond to the outer border
             } else {
                 star = ' ';
             }
@@ -93,6 +102,7 @@ int oddSum(int n) {
     if (n <= 0) {
         return n;
     }
+    //oddSum(n-1) is the counter and the other n's sum up to an odd number
     return oddSum(n - 1) + n + n - 1;
 }
 
