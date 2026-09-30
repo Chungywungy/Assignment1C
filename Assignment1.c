@@ -87,16 +87,13 @@ void displayRectangle(int height, int width)
 
 
 /* Task 5: Recursively Calculate the Sum of Odd Numbers */
-int oddSum(int n)
-{
+int oddSum(int n) {
     /* TODO: */
+
     if (n <= 0) {
-        return 0;
+        return n + n;
     }
-    if (n % 2 == 1) {
-        return n + oddSum(n - 1);
-    }
-    return oddSum(n - 1);
+    return oddSum()
 }
 
 #ifdef TEST_ASSIGNMENT
