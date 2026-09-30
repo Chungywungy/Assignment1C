@@ -91,9 +91,9 @@ int oddSum(int n) {
     /* TODO: */
 
     if (n <= 0) {
-        return n + n;
+        return n;
     }
-    return oddSum()
+    return oddSum(n - 1) + n + n - 1;
 }
 
 #ifdef TEST_ASSIGNMENT
